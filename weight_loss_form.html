@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فرم اطلاعات لاغری</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      direction: rtl;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>فرم ثبت اطلاعات لاغری</h2>
+    <form onsubmit="handleSubmit(event)">
+      <label>اسمت چیه؟</label>
+      <input type="text" name="name" required>
+  
+      <label>سن</label>
+      <input type="number" name="age" required>
+  
+      <label>قدت چنده؟</label>
+      <input type="text" name="height" required>
+  
+      <label>وزنت چقدره؟</label>
+      <input type="text" name="weight" required>
+  
+      <label>می‌خوای به چه وزنی برسی؟</label>
+      <input type="text" name="targetWeight" required>
+  
+      <label>شماره تماس (اختیاری)</label>
+      <input type="text" name="phone">
+  
+      <label>انگیزه و هدفت از لاغری چیه؟</label>
+      <textarea name="goal" rows="4" required></textarea>
+  
+      <button type="submit">ارسال</button>
+    </form>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert('اطلاعات با موفقیت ثبت شد (فعلاً به ایمیل ارسال نمی‌شود).');
+    }
+  </script>
+</body>
+</html>
